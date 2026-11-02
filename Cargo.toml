@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = ["musa-catalogo", "musa-plugin", "xtask"]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+authors = ["César"]
+license = "MIT"

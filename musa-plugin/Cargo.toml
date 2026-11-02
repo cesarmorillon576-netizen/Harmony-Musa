@@ -1,0 +1,19 @@
+[package]
+name = "musa-plugin"
+description = "Harmony Musa: pedalera multiefectos para guitarra"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", features = ["assert_process_allocs"] }
+nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+musa-catalogo = { path = "../musa-catalogo" }
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[dev-dependencies]
+assert_no_alloc = { git = "https://github.com/robbert-vdh/rust-assert-no-alloc.git", branch = "feature/nested-permit-forbid" }
